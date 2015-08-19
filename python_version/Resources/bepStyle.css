@@ -1,0 +1,263 @@
+/*----------global styles----------*/
+html{
+	height: 100%;
+    margin: -1em 0 0 0;
+    padding:0;
+}
+
+body{
+	height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+	position:relative;
+	width:100%;
+	height:90%;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+#logo{
+    width: 100%;
+    height: 65px;
+    margin: 10px 0;
+}
+
+#themeChooser{
+    position:absolute;
+    right: 0;
+    top: 0;
+    margin: 20px 15px 0 0;
+    text-align: left;
+}
+
+#darkButton{
+    color: #DDD;
+    background-color: #000;
+}
+
+/*-------------------------------------*/
+
+
+
+
+
+/*---------upload_view styles----------*/
+fieldset{
+    width: 66%;
+    margin: 1em auto;
+    padding: 1em 0;
+    border: 3px solid #0099ff;
+    border-radius: 1em;
+    box-shadow: 0 0 1em #000 inset;
+}
+
+form{
+    text-align: center;
+}
+
+#upBody{
+    padding-top: 1em;
+}
+
+#filedrag{
+
+	font-weight: bold;
+	text-align: center;
+	padding: 1em 0;
+	width: 50%;
+	height:10em;
+	margin: 2em auto;
+	border-radius: 7px;
+	cursor: default;
+}
+
+#filedrag.hover
+{
+    border-style: solid;
+    border-color: #9b4680;
+}
+
+#filedrag.full{
+    border: 2px solid #9b4680;
+}
+
+
+#submitButton{
+	margin-top: 10px;
+	display:table;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+#companyInput{
+    background-color: #eee;
+    border: 1px solid #777;
+}
+/*----------------------------------*/
+
+
+
+
+
+/*---------tree_view styles---------*/
+#treeBody{
+    height: 100%;
+}
+#treeTable{
+    table-layout: fixed;
+	width:100%;
+	height:100%;
+}
+#treeTable #tdTree{
+    width: 60%;
+    height: 100%;
+}
+#treeTable #tdInfo{
+    width: 40%;
+    height: 50%;
+}
+#treeTable #tdExempt{
+    width: 40%;
+    height: 50%;
+}
+
+#tree, #info, #exemptList{
+    border-radius: 1em;
+    box-shadow: 0 0 1em #000 inset;
+}
+
+#tree{
+	height:100%;
+    max-width:100%;
+	overflow:auto;
+    border: 3px solid #0099ff;
+}
+
+#info{
+	height:100%;
+	overflow:auto;
+    border: 3px solid #9b4680;
+}
+
+#infoList > li{
+	padding-bottom:15px;
+}
+
+#infoList .infoLabel{
+	text-decoration:underline;
+	font-weight:bold;
+    margin-right: 5px;
+}
+
+#infoList #otherDocList li{
+	padding-bottom:5px;
+	list-style:disc;
+}
+
+#exemptList{
+    padding:10px;
+    height:100%;
+    overflow:auto;
+    border: 3px solid #f06a24;
+}
+
+#exemptForm{
+    text-align: left;
+}
+
+#exemptSubmit{
+    display:block;
+    margin-bottom: 10px;
+    margin-right:auto;
+    margin-left:auto;
+}
+/*--------------------------------------*/
+
+
+
+
+
+/*------Tree style & functionality------*/
+li {
+    position: relative;
+    margin-left: -.75em;
+    list-style: none;
+}
+li input{
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    z-index: 2;
+	opacity: 0;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    top: 0;
+	
+}
+li label {
+    cursor: pointer;
+    display: block;
+    padding-left: 15px;
+	margin-bottom: 0px;
+	background: url(toggle-plus.png) no-repeat;
+	z-index: 0;
+
+}
+li .groupWrap{
+	display:none;
+	background: url(toggle-plus.png) no-repeat;
+	margin-top: -1.1em;
+	padding-top: 1.1em;
+	z-index: 1;
+}
+#rootLI input[type=checkbox]:checked  + .groupWrap{
+	display:block;
+    background: url(toggle-minus.png) no-repeat;
+}
+label button{
+	font-size: 8pt;
+}
+
+
+
+#promptWrap.hiddenPrompt{
+    display: none;
+}
+#promptWrap.showPrompt{
+    display: block;
+    position: absolute;
+    top: -70px;
+}
+
+#promptWrap.showPrompt .overlay{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    opacity: .80;
+    z-index:1001;
+}
+#promptWrap.showPrompt #prompt{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: auto;
+    height: 150px;
+    top:25%;
+    left:25%;
+    background-color: white;
+    z-index:1002;
+}
+#promptWrap.showPrompt #prompt button:last-child{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+/*-----------------------------------*/

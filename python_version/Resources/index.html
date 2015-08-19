@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="angular.min.js"></script>
+		<script src="angular-route.min.js"></script>
+        <script src ="matchOrganizer.js"></script>
+		<script type="text/python">
+			import challongeAPI
+			window.cAPI = challongeAPI
+		</script>
+		<link rel="stylesheet" type="text/css" href="matchOrgStyle.css">
+		<link id ="cssTheme" rel="stylesheet" type="text/css" href="theme_dark.css">
+	</head>
+	<body id="appBody" ng-app="matchApp">
+		<div id="logo">
+			<div id="themeChooser" ng-controller="themeCtrl">
+				Pick a theme:
+				<button id="darkButton" ng-click="setTheme('theme_dark.css')">Dark</button>
+				<button id="lightButton" ng-click="setTheme('theme_light.css')">Light</button>
+			</div>
+		</div>
+		<div id="wrapper" ng-view>
+
+		</div>
+	</body>
+</html>
