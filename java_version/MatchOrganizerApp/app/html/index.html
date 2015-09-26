@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src ="matchOrganizer.js"></script>
+		<link rel="stylesheet" type="text/css" href="matchOrgStyle.css">
+		<link id ="cssTheme" rel="stylesheet" type="text/css" href="theme_dark.css">
+		<!--<script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>-->
+	</head>
+	<body id="appBody">
+		<div id="logo">
+			<div id="refreshWrapper">
+				<button id="refreshButton" onclick="refreshEvents()">Refresh Events</button>
+			</div>
+			<div id="themeChooser">
+				Pick a theme:
+				<button id="darkButton" onclick="setDarkTheme()">Dark</button>
+				<button id="lightButton" onclick="setLightTheme()">Light</button>
+			</div>
+		</div>
+		<div id="wrapper">
+			<div id="matchTable">
+				<div class="inputContainer">
+					<input id="urlInput" type="text" /> <button onclick="addTable()" >Add Event</button>
+				</div>
+				<div id="stationDiv">
+					Available Stations: <textarea id="stationList"></textarea>
+					<button id="addStations">Add Stations</button>
+				</div>
+				<table id="outerTable" class="outerTable">
+					<tr>
+						<!-- Tables get inserted here -->
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
